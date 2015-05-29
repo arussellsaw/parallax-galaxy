@@ -1,0 +1,92 @@
+<html>
+    <head>
+    <style>
+
+/* Parallax base styles
+--------------------------------------------- */
+
+.parallax {
+height: 100vh;
+overflow-x: hidden;
+overflow-y: auto;
+-webkit-perspective: 1px;
+perspective: 1px;
+}
+
+.parallax__layer {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+.parallax__layer--base {
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+}
+
+.parallax__layer--1 {
+-webkit-transform: translateZ(-1px);
+transform: translateZ(-1px);
+}
+.parallax__layer--2 {
+-webkit-transform: translateZ(-2px);
+transform: translateZ(-2px);
+}
+.parallax__layer--3 {
+-webkit-transform: translateZ(-3px);
+transform: translateZ(-3px);
+}
+.parallax__layer--4 {
+-webkit-transform: translateZ(-4px);
+transform: translateZ(-4px);
+}
+
+* {
+margin:0;
+padding:0;
+}
+
+body {
+font: 100% / 1.5 Arial;
+}
+
+.parallax {
+font-size: 200%;
+}
+
+.parallax__layer {
+padding: 100vh 0;
+}
+
+.title {
+position: absolute;
+left: 50%;
+top: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+</style>
+    </head>
+    <body>
+        <div class="parallax">
+    <div class="parallax__layer parallax__layer--base">
+      <div class="title"><img src="base.png"></div>
+    </div>
+    <div class="parallax__layer parallax__layer--1">
+      <div class="title"><img src="1.png"></div>
+    </div>
+    <div class="parallax__layer parallax__layer--2">
+      <div class="title"><img src="2.png"></div>
+    </div>
+    <div class="parallax__layer parallax__layer--3">
+      <div class="title"><img src="3.png"></div>
+    </div>
+    <div class="parallax__layer parallax__layer--4">
+      <div class="title"><img src="4.png"></div>
+    </div>
+  </div>
+    </body>
+</html>
